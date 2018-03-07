@@ -15,12 +15,12 @@ const diagnalDifference = matrix => {
 const calculateDiagonal = (matrix, primary) => {
   let array = determineDirection(matrix, primary);
   return calculateTotal(array);
-}
+};
 
 const determineDirection = (matrix, primary) => {
   if (primary) return matrix;
   return [...matrix].reverse();
-}
+};
 
 const calculateTotal = (matrix) => {
   let index = 0;
@@ -30,7 +30,7 @@ const calculateTotal = (matrix) => {
     index++;
   }
   return total;
-}
+};
 
 
 
@@ -53,13 +53,13 @@ const sixBySix = [
   [1, 1, 3, 4, 4, 1], 
   [1, 2, 1, 2, 7, 4],
   [1, 9, 6, 4, 4, 2]
-]
+];
 
 const negativeThreeByThree = [
   [-6, -2, -5], 
   [-1, -2, -7], 
   [-3, -3, -3]
-]
+];
 
 assert.equal(calculateDiagonal(sixBySix, true), 28);
 assert.equal(calculateDiagonal(sixBySix, false), 14);
