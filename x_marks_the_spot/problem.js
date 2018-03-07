@@ -5,7 +5,7 @@
 // Test examples use `assert` module https://nodejs.org/api/assert.html
 const assert = require("assert");
 
-const diagnalDifference = matrix => {
+const diagonalDifference = matrix => {
   let primary = calculateDiagonal(matrix, true);
   let secondary = calculateDiagonal(matrix, false);
   let difference = primary - secondary;
@@ -64,7 +64,7 @@ const negativeThreeByThree = [
 assert.equal(calculateDiagonal(sixBySix, true), 28);
 assert.equal(calculateDiagonal(sixBySix, false), 14);
 
-assert.equal(diagnalDifference(negativeThreeByThree), 1);
-assert.equal(diagnalDifference(sixBySix), 14);
-assert.equal(diagnalDifference(threeByThree), 0);
-assert.equal(diagnalDifference(anotherThreeByThree), 6);
+assert.equal(diagonalDifference(negativeThreeByThree), 1);
+assert.equal(diagonalDifference(sixBySix), 14);
+assert.equal(diagonalDifference(threeByThree), 0);
+assert.equal(diagonalDifference(anotherThreeByThree), 6);
