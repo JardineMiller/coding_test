@@ -50,6 +50,11 @@ class TestMeme < Minitest::Test
     assert_equal 'beans 1', Problem.count_words(word_list)
   end
 
+  def test_number_list
+    word_list = %w(1 1 1 2 2 2 3 3)
+    assert_equal '1 3, 2 3, 3 2', Problem.count_words(word_list)
+  end
+
   def test_empty_word_list
     word_list = []
     assert_raises ArgumentError do
