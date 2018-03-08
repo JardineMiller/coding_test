@@ -8,8 +8,7 @@ const assert = require("assert");
 const diagonalDifference = matrix => {
   let primary = calculateDiagonal(matrix, true);
   let secondary = calculateDiagonal(matrix, false);
-  let difference = primary - secondary;
-  return Math.abs(difference);
+  return Math.abs(primary - secondary);
 };
 
 const calculateDiagonal = (matrix, isPrimary) => {
