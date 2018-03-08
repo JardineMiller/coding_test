@@ -12,13 +12,13 @@ const diagonalDifference = matrix => {
   return Math.abs(difference);
 };
 
-const calculateDiagonal = (matrix, primary) => {
-  let array = determineDirection(matrix, primary);
+const calculateDiagonal = (matrix, isPrimary) => {
+  let array = determineDirection(matrix, isPrimary);
   return calculateTotal(array);
 };
 
-const determineDirection = (matrix, primary) => {
-  if (primary) return matrix;
+const determineDirection = (matrix, isPrimary) => {
+  if (isPrimary) return matrix;
   return [...matrix].reverse();
 };
 
